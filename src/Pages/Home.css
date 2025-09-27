@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  min-width:  100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+
+}
+#typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    max-width: 45%;
+    white-space: pre-wrap;
+    margin-right: 5px;
+    position: absolute;
+    top :230px;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #4f46e5; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 5%;
+  color: black
+}
+
+.content:hover {
+  opacity: 1;
+}
+
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 1024px) {
+  
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    width: 100%;
+    
+  }
+  #typewriter {
+    font-size: 1rem;
+    max-width: 70%;
+    top: 150px;
+  }
+  .container{
+    background-color: #EDEDE9;
+  }
+  .container::before{
+    background-color: #EDEDE9;
+  }
+
+  
+ h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 576px) {
+
+  .content {
+    padding: 1rem;
+  }
+
+  
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 375px) {
+ 
+  .content {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.1rem !important;
+  }
+
+  h3 {
+    font-size: 0.9rem !important;
+  }
+}
