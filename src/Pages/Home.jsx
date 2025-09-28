@@ -43,7 +43,7 @@ const Home = () => {
       <div className="content">
         <h3 className="text-3xl pb-2 font-light">Hi, I am</h3>
         <h1 className="text-6xl pb-5 font-bold">Bhargav Guthula</h1>
-        <h2 className="text-3xl font-light">
+        <h2 className="text-2xl font-light text-gray-600">
           Full Stack Developer / UI Designer
         </h2>
         <p className="mt-5 text-lg font-light pt-4 " id="typewriter">

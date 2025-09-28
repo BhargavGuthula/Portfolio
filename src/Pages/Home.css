@@ -22,7 +22,7 @@ body {
 #typewriter {
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
-    max-width: 45%;
+    max-width: 39%;
     white-space: pre-wrap;
     margin-right: 5px;
     position: absolute;
@@ -47,7 +47,7 @@ body {
   width: 65%;
   height: 100%;
   background-color: white;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  clip-path: polygon(0 0, 82% 0, 71% 100%, 0% 100%);  
   z-index: 1;
 }
 

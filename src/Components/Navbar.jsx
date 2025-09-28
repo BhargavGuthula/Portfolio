@@ -128,20 +128,37 @@ function Navbar() {
                     const y = skillsElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
-                } else {
+                  } else {
                   sessionStorage.setItem('scrollToSkills', 'true');
                   window.location.href = '/';
                 }
                 setIsOpen(false);
               }}
               className="block hover:bg-white hover:text-black active:bg-white active:text-black transition duration-300 ease-in-out px-2 py-3 rounded-3xl"
+
             >
               My Skills
             </Link>
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/"
+              onClick={(e) => {
+                e.preventDefault();
+                const currentPath = location.pathname;
+                if(currentPath === '/'){
+                  const contactElement = document.getElementById('contact');
+                  if (contactElement) {
+                    const yOffset = -80;
+                    const y = contactElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }else{
+                  sessionStorage.setItem('scrollToContact', 'true');
+                  window.location.href = '/';
+                }
+                setIsOpen(false);
+              }}
               className="block hover:bg-white hover:text-black active:bg-white active:text-black transition duration-300 ease-in-out px-2 py-3 rounded-3xl"
             >
               Contact Me
