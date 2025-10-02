@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css';
+import IMG from '../assets/images/me (2).png';
 
 const Home = () => {
   const [text, setText] = React.useState('');
@@ -50,6 +51,10 @@ const Home = () => {
           {text}
         </p>
       </div>
+      <div className="image-container">
+        <img src={IMG} alt="Bhargav Guthula" className="profile-image" />
+      </div>  
+    
     </section>
   );
 };

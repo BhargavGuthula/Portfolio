@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiExpress, SiMysql } from 'react-icons/si';
+import { SiTailwindcss, SiMongodb, SiExpress, SiMysql , SiFirebase} from 'react-icons/si';
 import './MySkills.css';
 
 const MySkills = () => {
@@ -30,6 +30,7 @@ const MySkills = () => {
       skills: [
         { name: 'MongoDB', icon: <SiMongodb className="skill-icon" id='skill-icon-mongodb' />},
         { name: 'MySQL', icon: <SiMysql className="skill-icon" id='skill-icon-mysql'/>  },
+        {name:'firebase', icon:<SiFirebase className="skill-icon" id='skill-icon-firebase' color='red'/>}
       ],
     },
   ];

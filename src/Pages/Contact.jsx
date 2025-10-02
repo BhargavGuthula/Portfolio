@@ -53,6 +53,7 @@ const Contact = () => {
                     </div>
                     <div>
                         <textarea
+                            style={{color: 'black', padding: '0.75rem'}}
                             name="message"
                             placeholder='Enter Your Message'
                             value={formData.message}
@@ -60,7 +61,7 @@ const Contact = () => {
                             required
                         />
                     </div>
-                    <button type="submit">Send</button>
+                    <button type="submit" >Send</button>
                 </form>
             </div>
         </div>

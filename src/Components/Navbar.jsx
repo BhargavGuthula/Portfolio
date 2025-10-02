@@ -107,7 +107,7 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="/skills"
+              to="/projects"
               className="block hover:bg-white hover:text-black active:bg-white active:text-black transition duration-300 ease-in-out px-2 py-3 rounded-3xl"
               onClick={() => setIsOpen(false)}
             >
