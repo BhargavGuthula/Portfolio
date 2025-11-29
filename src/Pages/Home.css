@@ -32,7 +32,7 @@ body {
 #typewriter {
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
-    max-width: 39%;
+    max-width: 35%;
     white-space: pre-wrap;
     margin-right: 5px;
     position: absolute;
@@ -74,22 +74,18 @@ body {
 }
 
 
-/* Tablets and Smaller Desktops */
 @media (max-width: 1024px) {
-  
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-  .content {
-    padding: 1.5rem;
-    width: 100%;
-    
+  .image-container {
+    width: 30%;
+    right: 0%;
   }
   #typewriter {
     font-size: 1rem;
-    max-width: 70%;
-    top: 150px;
+    max-width: 40%;
+    top: 200px;
+  } 
+  #tyepwriter p{
+    font-size: large;
   }
   .container{
     background-color: #EDEDE9;
@@ -97,44 +93,52 @@ body {
   .container::before{
     background-color: #EDEDE9;
   }
-
-  
- h1 {
-    font-size: 2.5rem !important;
-  }
-
-  h2 {
-    font-size: 1.5rem !important;
-  }
-
-  h3 {
-    font-size: 1.25rem !important;
-  }
 }
 
-/* Large Phones */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    width: 100%;
+    
+  }
+  #typewriter {
+    padding-top: 20%;
+    font-size: 1rem;
+    max-width: 100%;
+    top: 150px;
+  }
+  #typewriter p {
+  
+    font-size: 0.2rem;
+    
+  }
+  .content h2{
+    padding-top: 5%;
+    font-size: large;
+  }
+  .content h1{
+    padding: 0;
+  }
+  
+
+}
+
 @media (max-width: 576px) {
 
   .content {
     padding: 1rem;
   }
-
+  .image-container {
+    display: none;
+  }
   
-
-  h1 {
-    font-size: 2rem !important;
+  .typerwriter {
+   
+    max-width: 100%;
   }
-
-  h2 {
-    font-size: 1.25rem !important;
-  }
-
-  h3 {
-    font-size: 1rem !important;
-  }
+ 
 }
 
-/* Small Phones */
 @media (max-width: 375px) {
  
   .content {
@@ -152,4 +156,6 @@ body {
   h3 {
     font-size: 0.9rem !important;
   }
+
+  
 }

@@ -136,14 +136,13 @@ textarea {
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 640px) {
   .contact-page {
-    padding: 1rem;
+    padding: 0rem;
   }
   
   .contact-container {
-    padding: 1.5rem;
+    padding: 0.5rem;
     margin-top: 3rem;
   }
 

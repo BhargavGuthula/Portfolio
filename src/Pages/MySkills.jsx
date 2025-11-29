@@ -49,13 +49,6 @@ const MySkills = () => {
                     {skill.icon}
                     <span className="skill-name">{skill.name}</span>
                   </div>
-                  {/* <div className="progress-bar-container">
-                    <div
-                      className="progress-bar"
-                      style={{ '--progress': `${skill.proficiency}%` }}
-                    ></div>
-                    <span className="proficiency">{skill.proficiency}%</span>
-                  </div> */}
                 </div>
               ))}
             </div>

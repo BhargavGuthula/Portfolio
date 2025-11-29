@@ -47,7 +47,7 @@ const Home = () => {
         <h2 className="text-2xl font-light text-gray-600">
           Full Stack Developer / UI Designer
         </h2>
-        <p className="mt-5 text-lg font-light pt-4 " id="typewriter">
+        <p className="mt-5 md:text-xl text-xs font-light pt-4 " id="typewriter">
           {text}
         </p>
       </div>
