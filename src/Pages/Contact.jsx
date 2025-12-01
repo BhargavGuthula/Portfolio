@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { db, collection, addDoc } from './Firebase/FirebaseConfig.js';
 import './Contact.css';
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -15,16 +16,31 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form Submitted', formData);
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        await addDoc(collection(db, "contacts"), {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            createdAt: new Date()
+        });
+
+        alert("Message sent!");
 
         setFormData({
-            name: '',
-            email: '',
-            message: ''
+            name: "",
+            email: "",
+            message: ""
         });
-    };
+
+    } catch (error) {
+        console.error("Error sending message: ", error);
+        alert("Failed to send message");
+    }
+};
 
     return (
         <div className='contact-page' id='contact'>
@@ -53,7 +69,7 @@ const Contact = () => {
                     </div>
                     <div>
                         <textarea
-                            style={{color: 'black', padding: '0.75rem'}}
+                            style={{ color: 'black', padding: '0.75rem' }}
                             name="message"
                             placeholder='Enter Your Message'
                             value={formData.message}
