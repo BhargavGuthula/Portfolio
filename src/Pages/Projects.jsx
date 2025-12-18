@@ -9,25 +9,24 @@ const Projects = () => {
       tags: ["React", "TailwindCSS", "Vite"],
       image: "/portfolio-preview.jpg",
       liveLink: "#",
-      githubLink: "https://github.com/YourUsername/portfolio"
+      githubLink: "https://github.com/BhargavGuthula/Portfolio"
     },
     {
-      title: "Project Two",
-      description: "Description of your second project. Highlight the key features and technologies used.",
-      tags: ["Node.js", "Express", "MongoDB"],
+      title: "Lexis MUN",
+      description: "A web application for an MUN (Model United Nations) event, built with React and Firebase.",
+      tags: ["React.js", "Firebase hosting"],
       image: "/project2-preview.jpg",
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://cmrtcmun.in/",
+      githubLink: "https://github.com/BhargavGuthula/lexis-mun"
     },
     {
-      title: "Project Three",
-      description: "Description of your third project. What makes it special?",
-      tags: ["React", "Firebase", "Material-UI"],
+      title: "Lexis Club",
+      description: "A web application for managing club activities and events, built with React and Firebase.",
+      tags: ["React", "Firebase", ],
       image: "/project3-preview.jpg",
       liveLink: "#",
-      githubLink: "#"
+      githubLink: "https://github.com/BhargavGuthula/Lexis-club"
     }
-    // Add more projects as needed
   ];
 
   return (
