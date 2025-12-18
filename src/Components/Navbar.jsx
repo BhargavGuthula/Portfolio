@@ -36,20 +36,31 @@ function Navbar() {
         }
       }, 100);
     }
+    else if (location.pathname === '/' && sessionStorage.getItem('scrollToContact')) {
+      sessionStorage.removeItem('scrollToContact');
+      setTimeout(() => {
+        const contactElement = document.getElementById('contact');  
+        if (contactElement) {
+          const yOffset = -40;
+          const y = contactElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 100);
+    }
   }, [location]);
+
 
   return (
     <nav
-      className={` md:backdrop-blur-sm pt-4 pr-2  md:p-6 fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "md:bg-black/30 bg-opacity-45   text-white" 
+      className={` md:backdrop-blur-sm pt-4 pr-2  md:p-6 fixed w-full z-50 transition-all duration-300 ${isScrolled
+          ? "md:bg-black/30 bg-opacity-45   text-white"
           : "bg-transparent border-transparent text-white"
-      }`}
+        }`}
     >
       <div className="max-w-[1440px] w-full mx-auto relative">
         <div className="flex justify-end items-center">
           <button
-            className={`md:hidden focus:outline-none flex justify-end transition-transform duration-300 ${isOpen? 'text-white':'text-black'}  hover:scale-110 z-50`}
+            className={`md:hidden focus:outline-none flex justify-end transition-transform duration-300 ${isOpen ? 'text-white' : 'text-black'}  hover:scale-110 z-50`}
             onClick={toggleMenu}
           >
             {isOpen ? (
@@ -87,11 +98,10 @@ function Navbar() {
         </div>
 
         <ul
-          className={`fixed md:relative z-40 top-0 left-0 w-full flex flex-col items-center transition-all duration-300 ease-in-out transform ${
-            isOpen
+          className={`fixed md:relative z-40 top-0 left-0 w-full flex flex-col items-center transition-all duration-300 ease-in-out transform ${isOpen
               ? "opacity-100 py-5 bg-black/30 backdrop-blur-sm  "
               : "opacity-0 -translate-y-full pointer-events-none select-none"
-          } space-y-6 py-2 md:bg-transparent md:backdrop-blur-none md:flex-row md:translate-y-0 md:space-y-0 md:py-0 md:pointer-events-auto md:opacity-100 md:justify-end md:space-x-16`}
+            } space-y-6 py-2 md:bg-transparent md:backdrop-blur-none md:flex-row md:translate-y-0 md:space-y-0 md:py-0 md:pointer-events-auto md:opacity-100 md:justify-end md:space-x-16`}
         >
           <li>
             <Link
@@ -120,15 +130,15 @@ function Navbar() {
               onClick={(e) => {
                 e.preventDefault();
                 const currentPath = location.pathname;
-                
+
                 if (currentPath === '/') {
                   const skillsElement = document.getElementById('skills');
                   if (skillsElement) {
-                    const yOffset = -80;
+                    const yOffset = -20;
                     const y = skillsElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
-                  } else {
+                } else {
                   sessionStorage.setItem('scrollToSkills', 'true');
                   window.location.href = '/';
                 }
@@ -146,14 +156,14 @@ function Navbar() {
               onClick={(e) => {
                 e.preventDefault();
                 const currentPath = location.pathname;
-                if(currentPath === '/'){
+                if (currentPath === '/') {
                   const contactElement = document.getElementById('contact');
                   if (contactElement) {
-                    const yOffset = -80;
+                    const yOffset = -40;
                     const y = contactElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
-                }else{
+                } else {
                   sessionStorage.setItem('scrollToContact', 'true');
                   window.location.href = '/';
                 }
